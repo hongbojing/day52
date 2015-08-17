@@ -1,25 +1,13 @@
 angular
 .module('myApp')
-.directive('blueButtonDirective',blueButtonDirective)
-.directive('greenButtonDirective',greenButtonDirective)
-.directive('lightBlueButtonDirective',lightBlueButtonDirective)
-.directive('orangeButtonDirective',orangeButtonDirective)
-.directive('redButtonDirective',redButtonDirective)
-.directive('defaultButtonDirective',defaultButtonDirective)
+.directive('greenAlertDirective',greenAlertDirective)
+.directive('lightBlueAlertDirective',lightBlueAlertDirective)
+.directive('orangeAlertDirective',orangeAlertDirective)
+.directive('redAlertDirective',redAlertDirective)
 ;
 
-function blueButtonDirective(){
-  return{
-    restrict:'A',
-    replace:true,
-    scope:{
-      blueContent:'@',
-      blueClass:'@'
-    },
-    template:'<button class="{{blueClass}}">{{blueContent}}</button>'
-  }
-}
-function greenButtonDirective(){
+
+function greenAlertDirective(){
   return{
     restrict:'A',
     replace:true,
@@ -27,10 +15,10 @@ function greenButtonDirective(){
       greenContent:'@',
       greenClass:'@'
     },
-    template:'<button class="{{greenClass}}">{{greenContent}}</button>'
+    template:'<p class="{{greenClass}}">{{greenContent}}</p>'
   }
 }
-function lightBlueButtonDirective(){
+function lightBlueAlertDirective(){
   return{
     restrict:'A',
     replace:true,
@@ -38,10 +26,10 @@ function lightBlueButtonDirective(){
       lightBlueContent:'@',
       lightBlueClass:'@'
     },
-    template:'<button class="{{lightBlueClass}}">{{lightBlueContent}}</button>'
+    template:'<p class="{{lightBlueClass}}">{{lightBlueContent}}</p>'
   }
 }
-function orangeButtonDirective(){
+function orangeAlertDirective(){
   return{
     restrict:'A',
     replace:true,
@@ -49,10 +37,10 @@ function orangeButtonDirective(){
       orangeContent:'@',
       orangeClass:'@'
     },
-    template:'<button class="{{orangeClass}}">{{orangeContent}}</button>'
+    template:'<p class="{{orangeClass}}">{{orangeContent}}</p>'
   }
 }
-function redButtonDirective(){
+function redAlertDirective(){
   return{
     restrict:'A',
     replace:true,
@@ -60,18 +48,7 @@ function redButtonDirective(){
       redContent:'@',
       redClass:'@'
     },
-    template:'<button class="{{redClass}}">{{redContent}}</button>'
-  }
-}
-function defaultButtonDirective(){
-  return{
-    restrict:'A',
-    replace:true,
-    scope:{
-      defaultContent:'@',
-      defaultClass:'@'
-    },
-    template:'<button class="{{defaultClass}}">{{defaultContent}}</button>'
+    template:'<p class="{{redClass}}">{{redContent}}</p>'
   }
 }
 
